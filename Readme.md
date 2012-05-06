@@ -21,6 +21,10 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
 });
 ```
 
+## Notes
+
+* It is still tied to jQuery or Zepto. Working towards perhaps detecting if you're on Windows8 (WinJS) so we can use the WinJS APIs instead of having jQuery/Zepto as a dependency.
+
 ## License 
 
 (The MIT License)
