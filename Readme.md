@@ -14,6 +14,7 @@ ServiceLocator
 ```
 
 #### Consuming a service
+
 ```
 ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, function(err, response) {
   if (err) throw new Error("Unable to fetch data from get user service");
@@ -22,9 +23,23 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
 });
 ```
 
+HTTP Method | Prefix | Description
+------------|--------|------------
+POST | addExampleService | Invokes a service with HTTP POST without specifying it by configuration. |
+GET | getExampleService | Invokes a service with HTTP GET without specifying it by configuration. |
+
+Since this is just client side (browser-based) you can actually do more than just POST and GET, by specifying a 'method'.
+
+```
+ServiceLocator
+  .addService(new Service("updateUserProfile", "/api/user", { method: "put"}))
+```
+
 ## Notes
 
 * It is still tied to jQuery or Zepto. Working towards perhaps detecting if you're on Windows8 (WinJS) so we can use the WinJS APIs instead of having jQuery/Zepto as a dependency.
+* Running the test suite (jasmine bdd) requires phantomjs being installed! (install it, add it to your path)
+
 
 ## License 
 
