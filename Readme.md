@@ -22,6 +22,7 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
   console.log(response);
 });
 ```
+
 <table>
   <tr>
     <th>HTTP Method</th>
