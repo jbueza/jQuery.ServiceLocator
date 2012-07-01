@@ -5,7 +5,10 @@
   , "keywords": []
   , "author": "Jaime Bueza <jbueza@gmail.com>"
   , "dependencies": {
-    "grunt":">= 0.3"
+    "grunt":">= 0.3",
+    "grunt-clean":">= 0.1",
+    "grunt-jasmine-task": ">= 0.2"
+    
   }
   , "main": "index"
   , "engines": { "node": "0.6.x" }
