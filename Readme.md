@@ -41,6 +41,14 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
   </tr>
 </table>
 
+
+Name               | Description         | 
+----------------- | ----------------- | -------
+isUri(value) | Should return false if `value` is null  | 
+isUri(value)   | Should return false if `value` is not a string | 
+
+
+
 Since this is just client side (browser-based) you can actually do more than just POST and GET, by specifying a 'method'.
 
 ```
