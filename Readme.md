@@ -23,31 +23,13 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
 });
 ```
 
-<table>
-  <tr>
-    <th>HTTP Method</th>
-    <th>Prefix / Example Service</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>POST</td>
-    <td>addExampleService</td>
-    <td>Invokes a service with HTTP POST without specifying it by configuration.</td>
-  </tr>
-  <tr>
-    <td>GET</td>
-    <td>getExampleService</td>
-    <td>Invokes a service with HTTP GET without specifying it by configuration.</td>
-  </tr>
-</table>
 
-
-Name               | Description         | 
------------------ | ----------------- | -------
-isUri(value) | Should return false if `value` is null  | 
-isUri(value)   | Should return false if `value` is not a string | 
-
-
+* HTTP POST
+  * prefix with "add"
+  * invokes a service with HTTP POST without specifying it by configuration.
+* HTTP GET
+  * prefix with "get"
+  * invokes a service with HTTP GET without specifying it by configuration.
 
 Since this is just client side (browser-based) you can actually do more than just POST and GET, by specifying a 'method'.
 
