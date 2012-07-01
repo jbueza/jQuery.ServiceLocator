@@ -59,6 +59,5 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-clean');
   grunt.loadNpmTasks('grunt-jasmine-task');
-
   grunt.registerTask("default", "clean concat min");
 };
