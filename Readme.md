@@ -44,6 +44,13 @@ ServiceLocator
 * It is still tied to jQuery or Zepto. Working towards perhaps detecting if you're on Windows8 (WinJS) so we can use the WinJS APIs instead of having jQuery/Zepto as a dependency.
 * Running the test suite (jasmine bdd) requires phantomjs being installed! (install it, add it to your path)
 
+## Running from repository
+
+* git clone git@github.com:jbueza/ServiceLocator.git
+* npm install
+* (ensure you have phantomjs installed)
+* grunt (this will run all the tasks)
+
 
 ## License 
 
