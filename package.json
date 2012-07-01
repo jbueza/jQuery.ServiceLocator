@@ -1,0 +1,12 @@
+{
+    "name": "ServiceLocator"
+  , "version": "0.1.0"
+  , "description": "JavaScript Service Locator"
+  , "keywords": []
+  , "author": "Jaime Bueza <jbueza@gmail.com>"
+  , "dependencies": {
+    "grunt":">= 0.3"
+  }
+  , "main": "index"
+  , "engines": { "node": "0.6.x" }
+}

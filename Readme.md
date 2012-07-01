@@ -9,7 +9,8 @@ Allows your teams to make use of the Service Locator pattern to help with commun
 #### Adding/Editing the Service Locator 
 ```
 ServiceLocator
-  .addService(new Service("getUserInformation", "/api/user"))
+  .addService(new Service("getUserInformation", "/api/user/{id}"))
+  .addService(new Service("addUser", "/api/user"))
 ```
 
 #### Consuming a service
