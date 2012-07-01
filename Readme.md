@@ -23,6 +23,7 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
 });
 ```
 
+#### Extra Configuration & Notes
 
 * HTTP POST
   * prefix with "add"
