@@ -3,11 +3,14 @@
 
 Allows your teams to make use of the Service Locator pattern to help with communication between Front-End a(UI Interactions) and Back-End (Web Services).
 
+If you're using CasperJS (wrapper around PhantomJS), you can easily leverage the ServiceLocator on the target site you're testing.
+
 ## Usage
 
 
 #### Adding/Editing the Service Locator 
-```
+
+```javascript
 ServiceLocator
   .addService(new Service("getUserInformation", "/api/user/{id}"))
   .addService(new Service("addUser", "/api/user"))
@@ -15,7 +18,7 @@ ServiceLocator
 
 #### Consuming a service
 
-```
+```javascript
 ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, function(err, response) {
   if (err) throw new Error("Unable to fetch data from get user service");
   
