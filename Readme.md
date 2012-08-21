@@ -44,8 +44,9 @@ ServiceLocator
 
 ## Notes
 
-* It is still tied to jQuery or Zepto. Working towards perhaps detecting if you're on Windows8 (WinJS) so we can use the WinJS APIs instead of having jQuery/Zepto as a dependency.
+* It is still tied to jQuery or Zepto. Working towards perhaps detecting if you're on Windows8 (WinJS) so we can use the WinJS APIs instead of having jQuery/Zepto as a dependency. Also, we're looking at an adapter for Titanium SDK (Appcelerator). 
 * Running the test suite (jasmine bdd) requires phantomjs being installed! (install it, add it to your path)
+
 
 ## Running from repository
 
