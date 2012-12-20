@@ -29,16 +29,26 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
 
 #### Using JSONP
 
+```javascript
+ServiceLocator.addService(new Service("getPhotos", "/api/photos", { jsonp: true }));
+
+ServiceLocator.getService("getUserInfo").invoke({ 
+  callback: "renderSomethingFromCDN"
+}, function(err, response) {
+  console.log(response);
+});
+```
 
 #### Using Templating
 
 ```javascript
-ServiceLocator.addService(new Service("getUserInfo", "/api/user/{name}"));
+ServiceLocator.addService(new Service("getUserInfo", "/api/user/{name}", { template: true }));
 
 ServiceLocator.getService("getUserInfo").invoke({ name: "jbueza"}, function(err, response) {
   console.log(response);
 });
 ```
+
 #### Extra Configuration & Notes
 
 * HTTP POST
