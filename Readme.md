@@ -34,6 +34,12 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
 * HTTP GET
   * prefix with "get"
   * invokes a service with HTTP GET without specifying it by configuration.
+* HTTP PUT
+  * prefix with "update"
+  * invokes a service with HTTP PUT without specifying it by configuration
+* HTTP DELETE
+  * prefix with "del"
+  * invokes a service with HTTP DELETE without specifying it by configuration
 
 Since this is just client side (browser-based) you can actually do more than just POST and GET, by specifying a 'method'.
 
