@@ -53,7 +53,7 @@ describe("Service", function() {
       expect(testService.parse("Hello there {name}", false)).toBeFalsy();
     });
     it("should return a properly templated URI", function() {
-      expect(testService.parse("/api/user/{user}", { user: 'jbueza'})).toBe("/api/user/jbueza");
+      expect(testService.parse("/api/user/{user}", { user: 'jbueza'}).uri).toBe("/api/user/jbueza");
     });
     it("should return false if passing incorrect arguments", function() {
       expect(testService.parse("/meow", {}, true)).toBeFalsy();
