@@ -32,7 +32,7 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
 ```javascript
 ServiceLocator.addService(new Service("getPhotos", "/api/photos", { jsonp: true }));
 
-ServiceLocator.getService("getUserInfo").invoke({ 
+ServiceLocator.getService("getPhotos").invoke({ 
   callback: "renderSomethingFromCDN"
 }, function(err, response) {
   console.log(response);
