@@ -26,6 +26,19 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
 });
 ```
 
+
+#### Using JSONP
+
+
+#### Using Templating
+
+```javascript
+ServiceLocator.addService(new Service("getUserInfo", "/api/user/{name}"));
+
+ServiceLocator.getService("getUserInfo").invoke({ name: "jbueza"}, function(err, response) {
+  console.log(response);
+});
+```
 #### Extra Configuration & Notes
 
 * HTTP POST
