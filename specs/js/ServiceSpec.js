@@ -29,12 +29,12 @@ describe("Service", function() {
     expect(postTestService.getOptions().method).toBe('post');
   });
 
-  it("should be a POST if the service name starts with 'del'", function() {
-    expect(delTestService.getOptions().method).toBe('post');
+  it("should be a DELETE if the service name starts with 'del'", function() {
+    expect(delTestService.getOptions().method).toBe('delete');
   });
 
-  it("should be a POST if the service name starts with 'update'", function() {
-    expect(updateTestService.getOptions().method).toBe('post');
+  it("should be a PUT if the service name starts with 'update'", function() {
+    expect(updateTestService.getOptions().method).toBe('put');
   });
   describe("Service.invoke", function() {
   
