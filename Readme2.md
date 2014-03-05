@@ -5,10 +5,12 @@ Allows your teams to make use of the Service Locator pattern to help with commun
 
 If you're using CasperJS (wrapper around PhantomJS), you can easily leverage the ServiceLocator on the target site you're testing.
 
-## Usage
+![Service Locator Pattern](https://f.cloud.github.com/assets/25766/2330293/a33bd09c-a42f-11e3-847b-53c1f8d77953.png)
+
+### Usage
 
 
-#### Adding/Editing the Service Locator 
+##### Adding/Editing the Service Locator 
 
 ```javascript
 ServiceLocator
@@ -16,7 +18,7 @@ ServiceLocator
   .addService(new Service("addUser", "/api/user"))
 ```
 
-#### Consuming a service
+##### Consuming a service
 
 ```javascript
 ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, function(err, response) {
@@ -27,7 +29,7 @@ ServiceLocator.getService("getUserInformation").invoke({ name: "jbueza"}, functi
 ```
 
 
-#### Using JSONP
+##### Using JSONP
 
 ```javascript
 ServiceLocator.addService(new Service("getPhotos", "/api/photos", { jsonp: true }));
@@ -39,7 +41,7 @@ ServiceLocator.getService("getPhotos").invoke({
 });
 ```
 
-#### Using Templating
+##### Using Templating
 
 ```javascript
 ServiceLocator.addService(new Service("getUserInfo", "/api/user/{name}", { template: true }));
@@ -49,7 +51,7 @@ ServiceLocator.getService("getUserInfo").invoke({ name: "jbueza"}, function(err,
 });
 ```
 
-#### Extra Configuration & Notes
+##### Extra Configuration & Notes
 
 * HTTP POST
   * prefix with "add"
@@ -71,13 +73,13 @@ ServiceLocator
   .addService(new Service("updateUserProfile", "/api/user", { method: "put"}))
 ```
 
-## Notes
+### Notes
 
 * It is still tied to jQuery or Zepto. Working towards perhaps detecting if you're on Windows8 (WinJS) so we can use the WinJS APIs instead of having jQuery/Zepto as a dependency. Also, we're looking at an adapter for Titanium SDK (Appcelerator). 
 * Running the test suite (jasmine bdd) requires phantomjs being installed! (install it, add it to your path)
 
 
-## Running from repository
+### Running from repository
 
 * git clone git@github.com:jbueza/ServiceLocator.git
 * npm install
@@ -85,10 +87,10 @@ ServiceLocator
 * grunt (this will run all the tasks)
 
 
-## License 
+### License 
 
 <pre>
-Copyright 2012 Jaime Bueza
+Copyright 2012 Jaime Bueza (jbueza@gmail.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
